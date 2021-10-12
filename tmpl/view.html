@@ -6,15 +6,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="/assets/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="h1">{{.Title}}</h1>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <!-- https://fontawesome.com/v5.15/icons/angle-double-right?style=solid -->
+                <a href="/view/{{.Title}}" class="nav-link">
+                    <span class="link-text">apper</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right"
+                        class="svg-inline--fa fa-angle-double-right fa-w-14" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <g class="fa-group">
+                            <path fill="currentColor" class="fa-secondary"
+                                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                            </path>
+                            <path fill="currentColor" class="fa-primary"
+                                d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/edit/{{.Title}}" class="nav-link">
+                    <!-- https://fontawesome.com/v5.15/icons/paw?style=solid -->
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paw"
+                        class="svg-inline--fa fa-paw fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <g class="fa-group">
+                            <path fill="currentColor" class="fa-secondary"
+                                d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z">
+                            </path>
+                            <path fill="currentColor" class="fa-primary"
+                                d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="link-text">Edit</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/view/{{.Title}}" class="nav-link">
+                    <!-- https://fontawesome.com/v5.15/icons/reddit-alien?style=brands -->
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="reddit-alien"
+                        class="svg-inline--fa fa-reddit-alien fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <g class="fa-group">
+                            <path fill="currentColor" class="fa-secondary"
+                                d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z">
+                            </path>
+                            <path fill="currentColor" class="fa-primary"
+                                d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="link-text">View</span>
+                </a>
+            </li>
 
-    <p>[<a href="/edit/{{.Title}}">edit</a>]</p>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <!-- https://fontawesome.com/v5.15/icons/user-astronaut?style=solid -->
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-astronaut"
+                        class="svg-inline--fa fa-user-astronaut fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <g class="fa-group">
+                            <path fill="currentColor" class="fa-secondary"
+                                d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z">
+                            </path>
+                            <path fill="currentColor" class="fa-primary"
+                                d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="link-text">Space</span>
+                </a>
+            </li>
 
-    <div>{{printf "%s" .Body}}</div>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <!-- https://fontawesome.com/v5.15/icons/space-shuttle?style=solid -->
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="space-shuttle"
+                        class="svg-inline--fa fa-space-shuttle fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512">
+                        <g class="fa-group">
+                            <path fill="currentColor" class="fa-secondary"
+                                d="M592.604 208.244C559.735 192.836 515.777 184 472 184H186.327c-4.952-6.555-10.585-11.978-16.72-16H376C229.157 137.747 219.403 32 96.003 32H96v128H80V32c-26.51 0-48 28.654-48 64v64c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v16c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v64c0 35.346 21.49 64 48 64V352h16v128h.003c123.4 0 133.154-105.747 279.997-136H169.606c6.135-4.022 11.768-9.445 16.72-16H472c43.777 0 87.735-8.836 120.604-24.244C622.282 289.845 640 271.992 640 256s-17.718-33.845-47.396-47.756zM488 296a8 8 0 0 1-8-8v-64a8 8 0 0 1 8-8c31.909 0 31.942 80 0 80z">
+                            </path>
+                            <path fill="currentColor" class="fa-primary" d=" M592.604 208.244C559.735 192.836 515.777 184 472
+                                184H186.327c-4.952-6.555-10.585-11.978-16.72-16H376C229.157 137.747 219.403 32 96.003
+                                32H96v128H80V32c-26.51 0-48 28.654-48 64v64c-23.197 0-32 10.032-32 24v40c0 13.983 8.819
+                                24 32 24v16c-23.197 0-32 10.032-32 24v40c0 13.983 8.819 24 32 24v64c0 35.346 21.49 64 48
+                                64V352h16v128h.003c123.4 0 133.154-105.747 279.997-136H169.606c6.135-4.022 11.768-9.445
+                                16.72-16H472c43.777 0 87.735-8.836 120.604-24.244C622.282 289.845 640 271.992 640
+                                256s-17.718-33.845-47.396-47.756zM488 296a8 8 0 0 1-8-8v-64a8 8 0 0 1 8-8c31.909 0
+                                31.942 80 0 80z"></path>
+                        </g>
+                    </svg>
+                    <span class="link-text">Shuttle</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="h1">{{.Title}}</h1>
+
+        <p>[<a href="/edit/{{.Title}}">edit</a>]</p>
+
+        <div>{{printf "%s" .Body}}</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed dolorum perspiciatis voluptatibus.
+            Quas, laudantium alias excepturi a dignissimos repellat veritatis rerum aspernatur qui, accusantium,
+            voluptatem aliquam commodi doloribus. Pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam doloremque soluta saepe in eos rem labore laudantium eveniet quaerat culpa, modi, nemo vel, ipsum
+            consectetur commodi at voluptates totam sint? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Alias adipisci voluptatum repudiandae aperiam! Nemo, totam, incidunt nostrum quod accusantium in assumenda
+            unde fugiat sit, officia eligendi dicta atque repudiandae provident? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores aspernatur eligendi alias, voluptates at assumenda nihil consequuntur non
+            obcaecati dolore error quae illum aut vitae dignissimos! Ipsum explicabo iste eum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Neque voluptate in omnis! Totam ea et, a earum error labore eaque nihil,
+            ad sed tempora maxime consequuntur molestias incidunt rem repellendus?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed dolorum perspiciatis voluptatibus.
+            Quas, laudantium alias excepturi a dignissimos repellat veritatis rerum aspernatur qui, accusantium,
+            voluptatem aliquam commodi doloribus. Pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam doloremque soluta saepe in eos rem labore laudantium eveniet quaerat culpa, modi, nemo vel, ipsum
+            consectetur commodi at voluptates totam sint? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Alias adipisci voluptatum repudiandae aperiam! Nemo, totam, incidunt nostrum quod accusantium in assumenda
+            unde fugiat sit, officia eligendi dicta atque repudiandae provident? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores aspernatur eligendi alias, voluptates at assumenda nihil consequuntur non
+            obcaecati dolore error quae illum aut vitae dignissimos! Ipsum explicabo iste eum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Neque voluptate in omnis! Totam ea et, a earum error labore eaque nihil,
+            ad sed tempora maxime consequuntur molestias incidunt rem repellendus?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed dolorum perspiciatis voluptatibus.
+            Quas, laudantium alias excepturi a dignissimos repellat veritatis rerum aspernatur qui, accusantium,
+            voluptatem aliquam commodi doloribus. Pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam doloremque soluta saepe in eos rem labore laudantium eveniet quaerat culpa, modi, nemo vel, ipsum
+            consectetur commodi at voluptates totam sint? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Alias adipisci voluptatum repudiandae aperiam! Nemo, totam, incidunt nostrum quod accusantium in assumenda
+            unde fugiat sit, officia eligendi dicta atque repudiandae provident? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores aspernatur eligendi alias, voluptates at assumenda nihil consequuntur non
+            obcaecati dolore error quae illum aut vitae dignissimos! Ipsum explicabo iste eum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Neque voluptate in omnis! Totam ea et, a earum error labore eaque nihil,
+            ad sed tempora maxime consequuntur molestias incidunt rem repellendus?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed dolorum perspiciatis voluptatibus.
+            Quas, laudantium alias excepturi a dignissimos repellat veritatis rerum aspernatur qui, accusantium,
+            voluptatem aliquam commodi doloribus. Pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam doloremque soluta saepe in eos rem labore laudantium eveniet quaerat culpa, modi, nemo vel, ipsum
+            consectetur commodi at voluptates totam sint? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Alias adipisci voluptatum repudiandae aperiam! Nemo, totam, incidunt nostrum quod accusantium in assumenda
+            unde fugiat sit, officia eligendi dicta atque repudiandae provident? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores aspernatur eligendi alias, voluptates at assumenda nihil consequuntur non
+            obcaecati dolore error quae illum aut vitae dignissimos! Ipsum explicabo iste eum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Neque voluptate in omnis! Totam ea et, a earum error labore eaque nihil,
+            ad sed tempora maxime consequuntur molestias incidunt rem repellendus?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sed dolorum perspiciatis voluptatibus.
+            Quas, laudantium alias excepturi a dignissimos repellat veritatis rerum aspernatur qui, accusantium,
+            voluptatem aliquam commodi doloribus. Pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Aperiam doloremque soluta saepe in eos rem labore laudantium eveniet quaerat culpa, modi, nemo vel, ipsum
+            consectetur commodi at voluptates totam sint? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Alias adipisci voluptatum repudiandae aperiam! Nemo, totam, incidunt nostrum quod accusantium in assumenda
+            unde fugiat sit, officia eligendi dicta atque repudiandae provident? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores aspernatur eligendi alias, voluptates at assumenda nihil consequuntur non
+            obcaecati dolore error quae illum aut vitae dignissimos! Ipsum explicabo iste eum. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Neque voluptate in omnis! Totam ea et, a earum error labore eaque nihil,
+            ad sed tempora maxime consequuntur molestias incidunt rem repellendus?
+        </p>
+    </main>
+
 </body>
 
 </html>
